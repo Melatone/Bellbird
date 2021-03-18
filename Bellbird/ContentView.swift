@@ -13,6 +13,7 @@ struct ContentView: View {
         VStack{
             Text("Goodbye, World!")
             Text("commit test")
+            Text("🙀")
         }
         
     }
