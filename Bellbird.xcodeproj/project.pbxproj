@@ -15,6 +15,7 @@
 		5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */; };
 		5F5B92F525FA75C000AE8F0A /* BellbirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92F425FA75C000AE8F0A /* BellbirdTests.swift */; };
 		5F5B930025FA75C000AE8F0A /* BellbirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */; };
+		FE49EB6E260A3E0A000188C1 /* Call in Resources */ = {isa = PBXBuildFile; fileRef = FE49EB6D260A3E0A000188C1 /* Call */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5F5B92FB25FA75C000AE8F0A /* BellbirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BellbirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellbirdUITests.swift; sourceTree = "<group>"; };
 		5F5B930125FA75C000AE8F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE49EB6D260A3E0A000188C1 /* Call */ = {isa = PBXFileReference; lastKnownFileType = file; path = Call; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				5F5B92E325FA75C000AE8F0A /* Assets.xcassets */,
 				5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */,
 				5F5B92EB25FA75C000AE8F0A /* Info.plist */,
+				FE49EB6C260A3DDB000188C1 /* Sounds */,
 				5F5B92E525FA75C000AE8F0A /* Preview Content */,
 			);
 			path = Bellbird;
@@ -134,6 +137,14 @@
 				5F5B930125FA75C000AE8F0A /* Info.plist */,
 			);
 			path = BellbirdUITests;
+			sourceTree = "<group>";
+		};
+		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FE49EB6D260A3E0A000188C1 /* Call */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE49EB6E260A3E0A000188C1 /* Call in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
