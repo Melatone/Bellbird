@@ -11,24 +11,35 @@ import Foundation
 
 struct ContentView: View {
     //looks like the AVAudioPlayer is causing issues
+    //so it needs to stay commented out for now until we resolve the issue
     
     //@State private var player: AVAudioPlayer!
     
-    //let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    //@State private var timeRemainingSeconds = 5
+    @State private var timeRemainingSeconds = 5
     
     //Leave date here as it might be useful in the future
-    //@State private var date = Date()
+    @State private var date = Date()
     
 
     //default sound for testing
     //let Default = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+    //sound doesn't work yet
+    
     
     
     var body: some View {
         VStack{
-            Text("hello")
+            Text("\(timeRemainingSeconds)").onReceive(timer){value in
+                if(self.timeRemainingSeconds>0){
+                    self.timeRemainingSeconds-=1
+                }else{
+                    self.timeRemainingSeconds = 5
+                }
+                
+            }
+            
             //Text("alarm branch commit test")
             //importing old framework over and building off of there
             
