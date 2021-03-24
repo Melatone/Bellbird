@@ -10,22 +10,23 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-    //looks like the AVAudioPlayer is causing issues
-    //so it needs to stay commented out for now until we resolve the issue
+    //it works now, ignore the weird error "No factory registered etc."
+    //I need to figure out how to reset the timer AFTER the alarm plays not during the duration of the alarm
     
-    //@State private var player: AVAudioPlayer!
+    @State private var player: AVAudioPlayer!
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var timeRemainingSeconds = 5
     
-    //Leave date here as it might be useful in the future
-    @State private var date = Date()
+    //Do we need date? Just leaving it here just in case its useful in the future
+    //@State private var date = Date()
     
 
     //default sound for testing
-    //let Default = Bundle.main.path(forResource: "Call", ofType: "mp3")!
-    //sound doesn't work yet
+    //so the first error here was that i had renamed the file so that it wasn't an mp3 anymore...whoops
+    let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+    
     
     
     
@@ -35,8 +36,26 @@ struct ContentView: View {
                 if(self.timeRemainingSeconds>0){
                     self.timeRemainingSeconds-=1
                 }else{
+                    let url = URL(fileURLWithPath: self.pitch)
+                    do{
+                        self.player = try AVAudioPlayer(contentsOf: url)
+                        
+                        self.player.play()
+                        
+                        
+                        
+                        
+                       
+                        
+                        
+                        
+                     
+                        
+                    }catch{
+                        //catch is just in case
+                        print("no")
+                    }
                     self.timeRemainingSeconds = 5
-                }
                 
             }
             
@@ -57,3 +76,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
     }
+}
