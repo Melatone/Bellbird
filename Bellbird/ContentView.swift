@@ -11,13 +11,16 @@ import Foundation
 
 struct ContentView: View {
     //it works now, ignore the weird error "No factory registered etc."
-    //I need to figure out how to reset the timer AFTER the alarm plays not during the duration of the alarm
     
     @State private var player: AVAudioPlayer!
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    //adding a timer to test running a sound for a certain amount of time/repeating
+    let timerTwo = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var timeRemainingSeconds = 5
+    //added new thing to attempt to try and play sound for a minute
+    @State private var timeSoundPlay = 60
     
     //Do we need date? Just leaving it here just in case its useful in the future
     //@State private var date = Date()
@@ -25,6 +28,7 @@ struct ContentView: View {
 
     //default sound for testing
     //so the first error here was that i had renamed the file so that it wasn't an mp3 anymore...whoops
+    //Don't do that
     let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
     
     
@@ -36,11 +40,17 @@ struct ContentView: View {
                 if(self.timeRemainingSeconds>0){
                     self.timeRemainingSeconds-=1
                 }else{
+                    //play sound for a certain amount of time/repeat
+                    //ok i got errors with the old method I tried time to run another routine
+                    //use a wait timer is what stack overflow likes
+                    
                     let url = URL(fileURLWithPath: self.pitch)
                     do{
                         self.player = try AVAudioPlayer(contentsOf: url)
                         
+                        
                         self.player.play()
+                        
                         
                         
                         
@@ -55,6 +65,7 @@ struct ContentView: View {
                         //catch is just in case
                         print("no")
                     }
+                    //i need this to reset after a certain time
                     self.timeRemainingSeconds = 5
                 
             }
