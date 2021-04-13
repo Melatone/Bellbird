@@ -16,6 +16,7 @@
 		5F5B92F525FA75C000AE8F0A /* BellbirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92F425FA75C000AE8F0A /* BellbirdTests.swift */; };
 		5F5B930025FA75C000AE8F0A /* BellbirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */; };
 		FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE49EB6F260BA9BB000188C1 /* Call.mp3 */; };
+		FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellbirdUITests.swift; sourceTree = "<group>"; };
 		5F5B930125FA75C000AE8F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE49EB6F260BA9BB000188C1 /* Call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Call.mp3; sourceTree = "<group>"; };
+		FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mourning_Doves.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */,
 				FE49EB6F260BA9BB000188C1 /* Call.mp3 */,
 			);
 			path = Sounds;
@@ -254,6 +257,7 @@
 				FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
+				FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
