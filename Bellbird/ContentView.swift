@@ -20,7 +20,11 @@ struct ContentView: View {
     
     @State private var timeRemainingSeconds = 5
     //added new thing to attempt to try and play sound for a minute
+    
     @State private var timeSoundPlay = 60
+    
+    
+    
     
     //Do we need date? Just leaving it here just in case its useful in the future
     //@State private var date = Date()
@@ -31,25 +35,44 @@ struct ContentView: View {
     //Don't do that
     let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
     
+    let dove = Bundle.main.path(forResource: "Mourning_Doves", ofType: "mp3")!
+    
     
     
     
     var body: some View {
         VStack{
             Text("\(timeRemainingSeconds)").onReceive(timer){value in
-                if(self.timeRemainingSeconds>0){
-                    self.timeRemainingSeconds-=1
-                }else{
+              //  if(self.timeRemainingSeconds>0){
+                    //self.timeRemainingSeconds-=1
+                //}else{
+                    
+                    //added sound to test repeating/playing a sound for a certain amount of time
+                    
                     //play sound for a certain amount of time/repeat
                     //ok i got errors with the old method I tried time to run another routine
                     //use a wait timer is what stack overflow likes
                     
-                    let url = URL(fileURLWithPath: self.pitch)
-                    do{
+                    //the below code works commenting out for testing purposes
+                    
+                    
+                    
+                    do{let url = URL(fileURLWithPath: self.pitch)
+                        
+                        
                         self.player = try AVAudioPlayer(contentsOf: url)
+                        self.player.numberOfLoops = 5
                         
                         
-                        self.player.play()
+                            
+                            self.player.play()
+                            
+                            //self.timeSoundPlay-=1
+                        
+                        
+                        
+                        //time to use timer number two
+                        
                         
                         
                         
@@ -63,12 +86,13 @@ struct ContentView: View {
                         
                     }catch{
                         //catch is just in case
-                        print("no")
+                        //print("no")
                     }
                     //i need this to reset after a certain time
-                    self.timeRemainingSeconds = 5
+                    
+                        //self.timeRemainingSeconds = 5}
                 
-            }
+                
             
             //Text("alarm branch commit test")
             //importing old framework over and building off of there
