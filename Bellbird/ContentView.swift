@@ -9,6 +9,7 @@ import AVFoundation
 import SwiftUI
 import Foundation
 
+
 struct ContentView: View {
     //it works now, ignore the weird error "No factory registered etc."
     
@@ -20,8 +21,8 @@ struct ContentView: View {
     
     @State private var timeRemainingSeconds = 5
     //added new thing to attempt to try and play sound for a minute
-    
-    @State private var timeSoundPlay = 60
+    //Commented out for time being
+    //@State private var timeSoundPlay = 60
     
     
     
@@ -35,7 +36,6 @@ struct ContentView: View {
     //Don't do that
     let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
     
-    let dove = Bundle.main.path(forResource: "Mourning_Doves", ofType: "mp3")!
     
     
     
@@ -43,9 +43,10 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Text("\(timeRemainingSeconds)").onReceive(timer){value in
-              //  if(self.timeRemainingSeconds>0){
-                    //self.timeRemainingSeconds-=1
-                //}else{
+                if(self.timeRemainingSeconds>0){
+                    print("bruh moment")
+                    self.timeRemainingSeconds-=1
+                }else{
                     
                     //added sound to test repeating/playing a sound for a certain amount of time
                     
@@ -61,36 +62,36 @@ struct ContentView: View {
                         
                         
                         self.player = try AVAudioPlayer(contentsOf: url)
-                        self.player.numberOfLoops = 5
+                        //self.player.numberOfLoops = 0
                         
+                        //so this loops but it loops forever
+                        let timeLimit = 1.0
                         
-                            
-                            self.player.play()
+                        self.player.play()
+                        //hopefully this stops the sound from playing
+                        Timer.scheduledTimer(withTimeInterval: timeLimit, repeats: false) { (timer) in
+                            self.player.stop()
+                        }
+                           
+                        
+                        //self.player.stop()
                             
                             //self.timeSoundPlay-=1
                         
                         
                         
-                        //time to use timer number two
                         
-                        
-                        
-                        
-                        
-                        
-                       
-                        
-                        
-                        
-                     
                         
                     }catch{
                         //catch is just in case
                         //print("no")
                     }
                     //i need this to reset after a certain time
-                    
-                        //self.timeRemainingSeconds = 5}
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 20.0){
+                        print("delay")
+                        self.timeRemainingSeconds = 5
+                    }
+                        }
                 
                 
             
