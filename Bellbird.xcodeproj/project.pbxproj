@@ -17,6 +17,7 @@
 		5F5B930025FA75C000AE8F0A /* BellbirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */; };
 		FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE49EB6F260BA9BB000188C1 /* Call.mp3 */; };
 		FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */; };
+		FEC0633B2628BC8D00A6BD8E /* SoundClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0633A2628BC8D00A6BD8E /* SoundClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5F5B930125FA75C000AE8F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE49EB6F260BA9BB000188C1 /* Call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Call.mp3; sourceTree = "<group>"; };
 		FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mourning_Doves.mp3; sourceTree = "<group>"; };
+		FEC0633A2628BC8D00A6BD8E /* SoundClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */,
 				5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */,
 				5F5B92E125FA75BE00AE8F0A /* ContentView.swift */,
+				FEC0633A2628BC8D00A6BD8E /* SoundClass.swift */,
 				5F5B92E325FA75C000AE8F0A /* Assets.xcassets */,
 				5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */,
 				5F5B92EB25FA75C000AE8F0A /* Info.plist */,
@@ -285,6 +288,7 @@
 			files = (
 				5F5B92DE25FA75BE00AE8F0A /* AppDelegate.swift in Sources */,
 				5F5B92E025FA75BE00AE8F0A /* SceneDelegate.swift in Sources */,
+				FEC0633B2628BC8D00A6BD8E /* SoundClass.swift in Sources */,
 				5F5B92E225FA75BE00AE8F0A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,9 +15,9 @@ struct ContentView: View {
     
     @State private var player: AVAudioPlayer!
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     //adding a timer to test running a sound for a certain amount of time/repeating
-    let timerTwo = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     
     @State private var timeRemainingSeconds = 5
     //added new thing to attempt to try and play sound for a minute
@@ -42,7 +42,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Text("\(timeRemainingSeconds)").onReceive(timer){value in
+            Text("\(timeRemainingSeconds)").onReceive(blip){value in
                 if(self.timeRemainingSeconds>0){
                     print("bruh moment")
                     self.timeRemainingSeconds-=1
@@ -62,17 +62,19 @@ struct ContentView: View {
                         
                         
                         self.player = try AVAudioPlayer(contentsOf: url)
-                        //self.player.numberOfLoops = 0
                         
+                        //self.player.numberOfLoops=5
                         //so this loops but it loops forever
                         let timeLimit = 1.0
                         
-                        self.player.play()
+                            self.player.play()
+                        
+                        
                         //hopefully this stops the sound from playing
                         Timer.scheduledTimer(withTimeInterval: timeLimit, repeats: false) { (timer) in
                             self.player.stop()
                         }
-                           
+                        
                         
                         //self.player.stop()
                             
@@ -83,14 +85,25 @@ struct ContentView: View {
                         
                         
                     }catch{
+                        print("no")
                         //catch is just in case
                         //print("no")
                     }
                     //i need this to reset after a certain time
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 20.0){
-                        print("delay")
-                        self.timeRemainingSeconds = 5
+                    //DispatchQueue.main.asyncAfter(deadline: .now() + 10.0){
+                        //self.timeRemainingSeconds=0
+                        
+                    //}
+                    if self.player.isPlaying == false{
+                        print("hello")
+                        self.timeRemainingSeconds=5
+                    }else{
+                        print("goodbye")
                     }
+                    
+                    
+                    
+
                         }
                 
                 
