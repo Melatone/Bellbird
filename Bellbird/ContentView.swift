@@ -15,8 +15,9 @@ struct ContentView: View {
     
     @State private var player: AVAudioPlayer!
     
-    let blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     //adding a timer to test running a sound for a certain amount of time/repeating
+    
     
     
     @State private var timeRemainingSeconds = 5
@@ -35,6 +36,7 @@ struct ContentView: View {
     //so the first error here was that i had renamed the file so that it wasn't an mp3 anymore...whoops
     //Don't do that
     let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+   
     
     
     
@@ -47,7 +49,7 @@ struct ContentView: View {
                     print("bruh moment")
                     self.timeRemainingSeconds-=1
                 }else{
-                    
+                    self.blip.upstream.connect().cancel()
                     //added sound to test repeating/playing a sound for a certain amount of time
                     
                     //play sound for a certain amount of time/repeat
@@ -63,17 +65,36 @@ struct ContentView: View {
                         
                         self.player = try AVAudioPlayer(contentsOf: url)
                         
-                        //self.player.numberOfLoops=5
-                        //so this loops but it loops forever
-                        let timeLimit = 1.0
+                        //this works what is mainly the problem now is the timer bugging out
+                        let timeLimit = 20.0
+                        
                         
                             self.player.play()
                         
                         
                         //hopefully this stops the sound from playing
                         Timer.scheduledTimer(withTimeInterval: timeLimit, repeats: false) { (timer) in
+                            
+                           
+                            
+                            
                             self.player.stop()
+                            
+                            timer.invalidate()
+                            //what is weird here is that it should just reset once but it is not doing that?
+                            
+                            //THIS IS SO HYPE IT WORKS NOW
+                        
+                            self.timeRemainingSeconds=5
+                            self.blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                            //invalidate the timer after this and start over?
+                            
                         }
+                        
+                        
+                        
+                       
+                        
                         
                         
                         //self.player.stop()
@@ -87,31 +108,18 @@ struct ContentView: View {
                     }catch{
                         print("no")
                         //catch is just in case
-                        //print("no")
-                    }
-                    //i need this to reset after a certain time
-                    //DispatchQueue.main.asyncAfter(deadline: .now() + 10.0){
-                        //self.timeRemainingSeconds=0
                         
-                    //}
-                    if self.player.isPlaying == false{
-                        print("hello")
-                        self.timeRemainingSeconds=5
-                    }else{
-                        print("goodbye")
                     }
                     
-                    
+
                     
 
                         }
+               
                 
                 
             
-            //Text("alarm branch commit test")
-            //importing old framework over and building off of there
             
-            //once timer runs down the sound plays and then it resets
             
             
             
