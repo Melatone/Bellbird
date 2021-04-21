@@ -7,8 +7,9 @@
 //
 import AVFoundation
 import SwiftUI
-//Repeater View 
+//Repeater View
 //Sound View for the Default noise
+//The time interval needs to be changeable
 struct SoundView: View {
      @State private var player: AVAudioPlayer!
        

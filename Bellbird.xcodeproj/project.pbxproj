@@ -18,6 +18,7 @@
 		FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE49EB6F260BA9BB000188C1 /* Call.mp3 */; };
 		FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */; };
 		FEC0633D2628BCFB00A6BD8E /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0633C2628BCFB00A6BD8E /* SoundView.swift */; };
+		FEC0633F262F28EB00A6BD8E /* Raven.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC0633E262F28EA00A6BD8E /* Raven.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FE49EB6F260BA9BB000188C1 /* Call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Call.mp3; sourceTree = "<group>"; };
 		FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mourning_Doves.mp3; sourceTree = "<group>"; };
 		FEC0633C2628BCFB00A6BD8E /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		FEC0633E262F28EA00A6BD8E /* Raven.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Raven.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FEC0633E262F28EA00A6BD8E /* Raven.mp3 */,
 				FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */,
 				FE49EB6F260BA9BB000188C1 /* Call.mp3 */,
 			);
@@ -260,6 +263,7 @@
 				FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
+				FEC0633F262F28EB00A6BD8E /* Raven.mp3 in Resources */,
 				FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
 			);
