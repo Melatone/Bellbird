@@ -22,6 +22,8 @@
 		FEC06341263092EC00A6BD8E /* Robin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC06340263092EB00A6BD8E /* Robin.mp3 */; };
 		FEC063432630933500A6BD8E /* Warbler.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063422630933400A6BD8E /* Warbler.mp3 */; };
 		FEC063452630992800A6BD8E /* owl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063442630992800A6BD8E /* owl.mp3 */; };
+		FEC063472631F1B300A6BD8E /* Cardinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063462631F1B200A6BD8E /* Cardinal.mp3 */; };
+		FEC063492631F23F00A6BD8E /* blackbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063482631F23F00A6BD8E /* blackbird.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		FEC06340263092EB00A6BD8E /* Robin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Robin.mp3; sourceTree = "<group>"; };
 		FEC063422630933400A6BD8E /* Warbler.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warbler.mp3; sourceTree = "<group>"; };
 		FEC063442630992800A6BD8E /* owl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = owl.mp3; sourceTree = "<group>"; };
+		FEC063462631F1B200A6BD8E /* Cardinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cardinal.mp3; sourceTree = "<group>"; };
+		FEC063482631F23F00A6BD8E /* blackbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blackbird.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FEC063482631F23F00A6BD8E /* blackbird.mp3 */,
+				FEC063462631F1B200A6BD8E /* Cardinal.mp3 */,
 				FEC063442630992800A6BD8E /* owl.mp3 */,
 				FEC063422630933400A6BD8E /* Warbler.mp3 */,
 				FEC06340263092EB00A6BD8E /* Robin.mp3 */,
@@ -271,6 +277,8 @@
 			files = (
 				FEC063432630933500A6BD8E /* Warbler.mp3 in Resources */,
 				FEC06341263092EC00A6BD8E /* Robin.mp3 in Resources */,
+				FEC063472631F1B300A6BD8E /* Cardinal.mp3 in Resources */,
+				FEC063492631F23F00A6BD8E /* blackbird.mp3 in Resources */,
 				FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
