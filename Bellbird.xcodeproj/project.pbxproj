@@ -19,6 +19,9 @@
 		FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */; };
 		FEC0633D2628BCFB00A6BD8E /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0633C2628BCFB00A6BD8E /* SoundView.swift */; };
 		FEC0633F262F28EB00A6BD8E /* Raven.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC0633E262F28EA00A6BD8E /* Raven.mp3 */; };
+		FEC06341263092EC00A6BD8E /* Robin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC06340263092EB00A6BD8E /* Robin.mp3 */; };
+		FEC063432630933500A6BD8E /* Warbler.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063422630933400A6BD8E /* Warbler.mp3 */; };
+		FEC063452630992800A6BD8E /* owl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063442630992800A6BD8E /* owl.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mourning_Doves.mp3; sourceTree = "<group>"; };
 		FEC0633C2628BCFB00A6BD8E /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		FEC0633E262F28EA00A6BD8E /* Raven.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Raven.mp3; sourceTree = "<group>"; };
+		FEC06340263092EB00A6BD8E /* Robin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Robin.mp3; sourceTree = "<group>"; };
+		FEC063422630933400A6BD8E /* Warbler.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warbler.mp3; sourceTree = "<group>"; };
+		FEC063442630992800A6BD8E /* owl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = owl.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FEC063442630992800A6BD8E /* owl.mp3 */,
+				FEC063422630933400A6BD8E /* Warbler.mp3 */,
+				FEC06340263092EB00A6BD8E /* Robin.mp3 */,
 				FEC0633E262F28EA00A6BD8E /* Raven.mp3 */,
 				FEC063382625E98D00A6BD8E /* Mourning_Doves.mp3 */,
 				FE49EB6F260BA9BB000188C1 /* Call.mp3 */,
@@ -260,12 +269,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC063432630933500A6BD8E /* Warbler.mp3 in Resources */,
+				FEC06341263092EC00A6BD8E /* Robin.mp3 in Resources */,
 				FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
 				FEC0633F262F28EB00A6BD8E /* Raven.mp3 in Resources */,
 				FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
+				FEC063452630992800A6BD8E /* owl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
