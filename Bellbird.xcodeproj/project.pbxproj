@@ -24,6 +24,8 @@
 		FEC063452630992800A6BD8E /* owl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063442630992800A6BD8E /* owl.mp3 */; };
 		FEC063472631F1B300A6BD8E /* Cardinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063462631F1B200A6BD8E /* Cardinal.mp3 */; };
 		FEC063492631F23F00A6BD8E /* blackbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC063482631F23F00A6BD8E /* blackbird.mp3 */; };
+		FEC0634B2631F41B00A6BD8E /* harpy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC0634A2631F41B00A6BD8E /* harpy.mp3 */; };
+		FEC0634D2631F52700A6BD8E /* Goose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEC0634C2631F52700A6BD8E /* Goose.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		FEC063442630992800A6BD8E /* owl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = owl.mp3; sourceTree = "<group>"; };
 		FEC063462631F1B200A6BD8E /* Cardinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cardinal.mp3; sourceTree = "<group>"; };
 		FEC063482631F23F00A6BD8E /* blackbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blackbird.mp3; sourceTree = "<group>"; };
+		FEC0634A2631F41B00A6BD8E /* harpy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harpy.mp3; sourceTree = "<group>"; };
+		FEC0634C2631F52700A6BD8E /* Goose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goose.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 		FE49EB6C260A3DDB000188C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FEC0634C2631F52700A6BD8E /* Goose.mp3 */,
+				FEC0634A2631F41B00A6BD8E /* harpy.mp3 */,
 				FEC063482631F23F00A6BD8E /* blackbird.mp3 */,
 				FEC063462631F1B200A6BD8E /* Cardinal.mp3 */,
 				FEC063442630992800A6BD8E /* owl.mp3 */,
@@ -281,10 +287,12 @@
 				FEC063492631F23F00A6BD8E /* blackbird.mp3 in Resources */,
 				FE49EB70260BA9BB000188C1 /* Call.mp3 in Resources */,
 				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
+				FEC0634D2631F52700A6BD8E /* Goose.mp3 in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
 				FEC0633F262F28EB00A6BD8E /* Raven.mp3 in Resources */,
 				FEC063392625E98D00A6BD8E /* Mourning_Doves.mp3 in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
+				FEC0634B2631F41B00A6BD8E /* harpy.mp3 in Resources */,
 				FEC063452630992800A6BD8E /* owl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
