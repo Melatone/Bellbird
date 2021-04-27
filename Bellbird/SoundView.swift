@@ -12,7 +12,9 @@ import SwiftUI
 //The time interval needs to be changeable
 struct SoundView: View {
      @State private var player: AVAudioPlayer!
-       
+    var sounds: [String] = ["Goose", "harpy", "blackbird", "Cardinal", "owl", "Warbler", "Robin", "Raven", "Mourning_Doves", "Call"]
+    //default sound
+    @State private var selectedSound = "Call"
        @State var blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        //adding a timer to test running a sound for a certain amount of time/repeating
        
@@ -33,6 +35,7 @@ struct SoundView: View {
        //default sound for testing
        //so the first error here was that i had renamed the file so that it wasn't an mp3 anymore...whoops
        //Don't do that
+    //need a way to change the sound 
        let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
       
        
@@ -42,6 +45,11 @@ struct SoundView: View {
        
        var body: some View {
            VStack{
+            Picker("", selection: $selectedSound){
+                ForEach(sounds, id:\.self){
+                    Text($0)
+                }
+            }
                Text("\(timeRemainingSeconds)").onReceive(blip){value in
                    if(self.timeRemainingSeconds>0){
                        print("bruh moment")
