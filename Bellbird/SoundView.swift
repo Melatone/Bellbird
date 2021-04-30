@@ -8,17 +8,27 @@
 import AVFoundation
 import SwiftUI
 import MediaPlayer
+
 //Repeater View
 //Sound View for the Default noise
 //The time interval needs to be changeable
+
 struct SoundView: View {
+    var sounds = ["Goose", "Call", "Raven", "blackbird", "harpy", "Mourning_Dove", "Cardinal", "owl", "Warbler", "Robin"]
+    @State private var selectedSound = "Call"
+    //use this component to play the sound UwU
+    
+    //let soundData = NSDataAsset(name: selectedSoundString)
+    
      @State private var player: AVAudioPlayer!
+   
+    
     //need to be able to access the sound library
     
     
        @State var blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        //adding a timer to test running a sound for a certain amount of time/repeating
-    @State var sound = "Call"
+    
        
        
     @State private var timeLimit = 20.0
@@ -40,7 +50,18 @@ struct SoundView: View {
     //need a way to change the sound
     //make the name a variable? Somehow?
     
-       let pitch = Bundle.main.path(forResource: "\(sound)", ofType: "mp3")!
+    //Could possibly change the method the sound is played? I don't understand it
+    //Cannot modify the variable so we have to pass it through a function to make it immutable
+    
+       let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+    //Rob knows how to change between sounds so this has been deprecated
+    //change time interval i guess? that's easy
+    
+    //basically im just gonna hardcode this in stupidly
+    //Basically, if statement the hell away and if the picker is so and so use this pitch
+    //let pitchTwo = Bundle.main.path(forResource: "Goose", ofType: "mp3")!
+    //let pitchThree = Bundle.main.path(forResource: "Robin", ofType: "mp3")!
+    
       
        
        
@@ -49,6 +70,15 @@ struct SoundView: View {
        
        var body: some View {
            VStack{
+            //idk how button works ill just uhhhhhh
+            Button("change the time interval"){
+                //invalidates timer so that it doesn't get messed up
+                //why isn't it working...
+                self.timeRemainingSeconds+=1
+            }
+            //make picker here and use ifstatement bus
+            
+           
            
                Text("\(timeRemainingSeconds)").onReceive(blip){value in
                    if(self.timeRemainingSeconds>0){
@@ -66,7 +96,9 @@ struct SoundView: View {
                        
                        
                        
-                       do{let url = URL(fileURLWithPath: self.pitch)
+                       do{
+                        
+                        let url = URL(fileURLWithPath: self.pitch)
                            
                            
                            self.player = try AVAudioPlayer(contentsOf: url)
@@ -97,19 +129,7 @@ struct SoundView: View {
                                
                            }
                            
-                           
-                           
-                          
-                           
-                           
-                           
-                           //self.player.stop()
-                               
-                               //self.timeSoundPlay-=1
-                           
-                           
-                           
-                           
+                    
                            
                        }catch{
                            print("no")
@@ -121,7 +141,7 @@ struct SoundView: View {
                        
 
                            }
-                  
+
                    
                    
                
@@ -134,3 +154,4 @@ struct SoundView_Previews: PreviewProvider {
 }
 }
 }
+
