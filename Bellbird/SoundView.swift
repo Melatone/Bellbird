@@ -14,24 +14,22 @@ import MediaPlayer
 //The time interval needs to be changeable
 
 struct SoundView: View {
-    var sounds = ["Goose", "Call", "Raven", "blackbird", "harpy", "Mourning_Dove", "Cardinal", "owl", "Warbler", "Robin"]
-    @State private var selectedSound = "Call"
-    //use this component to play the sound UwU
+    //considering on working on my own version of picking sounds later, but for now this is all deprecated
+    //var sounds = ["Goose", "Call", "Raven", "blackbird", "harpy", "Mourning_Dove", "Cardinal", "owl", "Warbler", "Robin"]
+    //@State private var selectedSound = "Call"
     
-    //let soundData = NSDataAsset(name: selectedSoundString)
     
+    
+    //Player for the sound
      @State private var player: AVAudioPlayer!
-   
-    
-    //need to be able to access the sound library
-    
-    
+   //Timer
        @State var blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        //adding a timer to test running a sound for a certain amount of time/repeating
     
        
-       
+      //How long the sound plays/how long until the timer resets
     @State private var timeLimit = 20.0
+    //How much time the timer spends to run down to zero
        @State private var timeRemainingSeconds = 5
        //added new thing to attempt to try and play sound for a minute
        //Commented out for time being
@@ -52,13 +50,16 @@ struct SoundView: View {
     
     //Could possibly change the method the sound is played? I don't understand it
     //Cannot modify the variable so we have to pass it through a function to make it immutable
+    //This might also be useless but at least this is a whole different view from which code can be recycled
     
+    //Sound the player plays
        let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+    
     //Rob knows how to change between sounds so this has been deprecated
     //change time interval i guess? that's easy
     
     //basically im just gonna hardcode this in stupidly
-    //Basically, if statement the hell away and if the picker is so and so use this pitch
+    
     //let pitchTwo = Bundle.main.path(forResource: "Goose", ofType: "mp3")!
     //let pitchThree = Bundle.main.path(forResource: "Robin", ofType: "mp3")!
     
@@ -70,21 +71,24 @@ struct SoundView: View {
        
        var body: some View {
            VStack{
-            //idk how button works ill just uhhhhhh
+            //Button for changing the timeRemainingSeconds (WIP)
             Button("change the time interval"){
                 //invalidates timer so that it doesn't get messed up
                 //why isn't it working...
+                
                 self.timeRemainingSeconds+=1
             }
             //make picker here and use ifstatement bus
             
            
-           
+           //Shows how much time remaining in seconds until the alarm sounds
                Text("\(timeRemainingSeconds)").onReceive(blip){value in
                    if(self.timeRemainingSeconds>0){
-                       //print("bruh moment")
+                      //subtracts one for every second timeRemainingSeconds is not zero
                        self.timeRemainingSeconds-=1
+                    //once timeRemainingSeconds is zero this runs
                    }else{
+                    //invalidates the timer
                        self.blip.upstream.connect().cancel()
                        //added sound to test repeating/playing a sound for a certain amount of time
                        
@@ -118,10 +122,8 @@ struct SoundView: View {
                                
                                self.player.stop()
                                
-                               timer.invalidate()
-                               //what is weird here is that it should just reset once but it is not doing that?
                                
-                               //THIS IS SO HYPE IT WORKS NOW
+                              
                            
                                self.timeRemainingSeconds=5
                                self.blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
