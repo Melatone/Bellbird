@@ -7,19 +7,21 @@
 //
 import AVFoundation
 import SwiftUI
+import MediaPlayer
 //Repeater View
 //Sound View for the Default noise
 //The time interval needs to be changeable
 struct SoundView: View {
      @State private var player: AVAudioPlayer!
-    var sounds: [String] = ["Goose", "harpy", "blackbird", "Cardinal", "owl", "Warbler", "Robin", "Raven", "Mourning_Doves", "Call"]
-    //default sound
-    @State private var selectedSound = "Call"
+    //need to be able to access the sound library
+    
+    
        @State var blip = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        //adding a timer to test running a sound for a certain amount of time/repeating
+    @State var sound = "Call"
        
        
-       
+    @State private var timeLimit = 20.0
        @State private var timeRemainingSeconds = 5
        //added new thing to attempt to try and play sound for a minute
        //Commented out for time being
@@ -35,8 +37,10 @@ struct SoundView: View {
        //default sound for testing
        //so the first error here was that i had renamed the file so that it wasn't an mp3 anymore...whoops
        //Don't do that
-    //need a way to change the sound 
-       let pitch = Bundle.main.path(forResource: "Call", ofType: "mp3")!
+    //need a way to change the sound
+    //make the name a variable? Somehow?
+    
+       let pitch = Bundle.main.path(forResource: "\(sound)", ofType: "mp3")!
       
        
        
@@ -45,14 +49,10 @@ struct SoundView: View {
        
        var body: some View {
            VStack{
-            Picker("", selection: $selectedSound){
-                ForEach(sounds, id:\.self){
-                    Text($0)
-                }
-            }
+           
                Text("\(timeRemainingSeconds)").onReceive(blip){value in
                    if(self.timeRemainingSeconds>0){
-                       print("bruh moment")
+                       //print("bruh moment")
                        self.timeRemainingSeconds-=1
                    }else{
                        self.blip.upstream.connect().cancel()
@@ -72,14 +72,14 @@ struct SoundView: View {
                            self.player = try AVAudioPlayer(contentsOf: url)
                            
                            //this works what is mainly the problem now is the timer bugging out
-                           let timeLimit = 20.0
+                           //let timeLimit = 20.0
                            
                            
                                self.player.play()
                            
                            
                            //hopefully this stops the sound from playing
-                           Timer.scheduledTimer(withTimeInterval: timeLimit, repeats: false) { (timer) in
+                        Timer.scheduledTimer(withTimeInterval: self.timeLimit, repeats: false) { (timer) in
                                
                               
                                
