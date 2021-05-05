@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TimebombView: View {
-    @Binding var bomb : Alarm
+    @Binding var bomb : Timebomb
     
         var body: some View {
             

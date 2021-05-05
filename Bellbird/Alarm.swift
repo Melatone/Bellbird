@@ -11,18 +11,18 @@ import UIKit
 class Alarm:ObservableObject{
     var name:String
     var time:DateComponents
-    var type: String
+ 
     var color:UIColor
     var active:Bool
     var meridian:String
     
-    init(name:String = "name",time : DateComponents = DateComponents(),color:UIColor=UIColor(),active: Bool = false, meridian : String = "AM", type : String = "alarm"){
+    init(name:String = "name",time : DateComponents = DateComponents() ,color: UIColor = UIColor() ,active: Bool = false, meridian : String = "AM"){
         self.name = name
         self.time = time
         self.meridian = meridian
         self.color = color
         self.active = active
-        self.type = type
+
         
        
     }

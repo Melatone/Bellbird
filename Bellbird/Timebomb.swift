@@ -12,9 +12,8 @@ import UIKit
 class Timebomb: Alarm{
   
   
-    init(name:String = "name",time : DateComponents = DateComponents(),active: Bool = false,meridian :String = "AM"){
-      
-        
+    init(name:String = "name",time : DateComponents = DateComponents(),active: Bool = false,meridian :String = "AM", color: UIColor = UIColor()){
+  
        
     }
  

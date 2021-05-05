@@ -15,6 +15,7 @@ struct RepeaterView: View {
     var body: some View {
         
         ZStack{
+            
             RoundedRectangle(cornerRadius: 30)
                 .foregroundColor(Color(self.alarm.color))
                 .frame(width: 350, height: 120, alignment: .center)
@@ -29,7 +30,7 @@ struct RepeaterView: View {
             
             
             
-            Text("\(self.alarm.time.value(for: .hour)!):\(self.alarm.time.value(for: .minute)!)")
+            Text("\(self.alarm.time.value(for: .hour)!):\(self.alarm.time.value(for: .hour)!)")
                 .foregroundColor(.white)
                 .font(.largeTitle)
                 .bold()
@@ -63,6 +64,6 @@ struct RepeaterView: View {
 
 struct RepeaterView_Previews: PreviewProvider {
     static var previews: some View {
-        RepeaterView(alarm: Binding.constant(Repeater(name: "name", time: DateComponents(hour:7,minute:30), interval: 5, color: UIColor(named: "BBPink")!)))
+        RepeaterView(alarm: Binding.constant(Repeater(name: "name", time: DateComponents(hour: 7, minute: 30), interval: 5, color: UIColor(named: "BBRed")!, meridian: "AM", active: false)))
     }
 }

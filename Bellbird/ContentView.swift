@@ -19,7 +19,7 @@ struct ContentView: View {
 
  }
     
-    @State var alarms : [Alarm] = [Alarm]()
+    @State var alarms : [Alarm] = [Repeater(name: "name", time: DateComponents(hour: 7, minute: 30), interval: 5, color: UIColor(named: "BBRed")!, meridian: "AM", active: false)]
     
   
     var body: some View {

@@ -121,6 +121,6 @@ struct NewToggleStyle:ToggleStyle{
 
 struct GroupAlarmView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupAlarmView(groupAlarm: Binding.constant(GroupAlarm(name: "name", times: [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], color :  UIColor(named:"BBGreen")!)))
+        GroupAlarmView(groupAlarm: Binding.constant(GroupAlarm(name: "name", times: [ComplexDate(date: DateComponents(hour:7,minute:30), active: false, meridian: "AM")], color :  UIColor(named:"BBGreen")!)))
     }
 }

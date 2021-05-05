@@ -11,28 +11,51 @@ import SwiftUI
 struct PassiveView: View {
     @Binding var alarms : [Alarm]
     var body: some View {
-       NavigationView{
-                            ZStack{
-       
-                               
-                                
-                                Color.init("Backdrop")
-                                .edgesIgnoringSafeArea(.all)
-                                
-                               
-                              
-                                    
-                                
-                                    
-                                
+        NavigationView{
+            ZStack{
+                
+                
+                
+                Color.init("Backdrop")
+                    .edgesIgnoringSafeArea(.all)
+                ForEach(0..<self.alarms.count, id: \.self){ buzz in
+                    Group{
                         
-                            .foregroundColor(Color("BackAccent"))
-                            }.navigationBarTitle("Passive Alarms")
-                          
+                        if self.alarms[buzz].active == false{
+                            
+                            if type(of:self.alarms[buzz]) == Repeater.self{
+                                
+                                RepeaterView(alarm: Binding.constant(self.alarms[buzz]as! Repeater))
+                                
+                            }
+                            else  if type(of: self.alarms[buzz]) == GroupAlarm.self {
+                                
+                                GroupAlarmView(groupAlarm: Binding.constant(self.alarms[buzz]as! GroupAlarm))
+                                
+                            }
+                            else {
+                                
+                                TimebombView(bomb:  Binding.constant(self.alarms[buzz]as! Timebomb))
+                            }
+                            
                         }
-                           
+                    }
+                    
                 }
-           }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                .foregroundColor(Color("BackAccent"))
+            }.navigationBarTitle("Passive Alarms")
+            
+        }
+        
+    }
+}
 
 struct PassiveView_Previews: PreviewProvider {
     static var previews: some View {

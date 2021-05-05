@@ -53,6 +53,6 @@ struct AlarmView: View {
 
 struct AlarmView_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmView(alarm: Binding.constant(Alarm(name: "name",time :  DateComponents(hour:7,minute:30),color: UIColor.black, active: false, type :  "alarm")))
+        AlarmView(alarm: Binding.constant(Alarm(name: "name",time :  DateComponents(hour:7,minute:30),color: UIColor.black, active: false)))
     }
 }

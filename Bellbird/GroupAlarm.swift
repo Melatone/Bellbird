@@ -13,7 +13,7 @@ class GroupAlarm : Alarm{
     var times:[ComplexDate]
 
    
-    init(name:String = "name", times : [ComplexDate] = [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], color:UIColor = UIColor(named:"BBMint")!){
+    init(name:String = "name", times : [ComplexDate] = [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], color:UIColor = UIColor(named:"BBMint")! ){
         
         self.times = times
         

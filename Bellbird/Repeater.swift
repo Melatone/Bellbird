@@ -12,10 +12,12 @@ class Repeater: Alarm{
   
     var interval:Int
   
-    init(name:String = "name",time : DateComponents = DateComponents(), interval : Int = 5 , color:UIColor = UIColor(named: "BBPink")!,meridian :String = "AM", active: Bool = false){
+    init(name:String = "name", time : DateComponents = DateComponents(), interval : Int = 5 , color:UIColor = UIColor(), meridian :String = "AM", active: Bool = false){
+     
         self.interval = interval
        
     }
+   
  
    
 }

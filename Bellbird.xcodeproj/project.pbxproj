@@ -131,11 +131,11 @@
 			children = (
 				5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */,
 				5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */,
+				5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */,
 				5F5B92E125FA75BE00AE8F0A /* ContentView.swift */,
 				5F73C42C260BACD500D64D1B /* RepeaterView.swift */,
 				5FA4EF37262E362D005FC93C /* GroupAlarm.swift */,
 				5F22DA9F2637707A00F1CE70 /* AddGroupView.swift */,
-				5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */,
 				5F73C422260BA67600D64D1B /* Alarm.swift */,
 				5F019370263C485D00EEF0E2 /* TimebombView.swift */,
 				5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */,

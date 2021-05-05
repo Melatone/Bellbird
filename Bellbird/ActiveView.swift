@@ -19,24 +19,25 @@ struct ActiveView: View {
                 Color.init("Backdrop")
                     .edgesIgnoringSafeArea(.all)
                 
+               
                 ForEach(0..<self.alarms.count, id: \.self){ buzz in
                     Group{
                         
-                        if self.alarms[buzz].active {
+                        if self.alarms[buzz].active == true{
                             
-                            if self.alarms[buzz].type == "Repeater"{
+                            if type(of:self.alarms[buzz]) == Repeater.self{
                                 
                                 RepeaterView(alarm: Binding.constant(self.alarms[buzz]as! Repeater))
-                            
+                                
                             }
-                            else  if self.alarms[buzz].type == "Group"{
+                            else  if type(of: self.alarms[buzz]) == GroupAlarm.self {
                                 
                                 GroupAlarmView(groupAlarm: Binding.constant(self.alarms[buzz]as! GroupAlarm))
                                 
                             }
                             else {
                                 
-                                TimebombView(bomb: self.$alarms[buzz])
+                                TimebombView(bomb:  Binding.constant(self.alarms[buzz]as! Timebomb))
                             }
                             
                         }
@@ -49,7 +50,7 @@ struct ActiveView: View {
                 
                 
                 
-                VStack{
+            
                     
                     
                     
@@ -62,7 +63,7 @@ struct ActiveView: View {
                             .font(.custom("Helvetic Neue",size:30))
                         
                     })
-                }
+                
                 .foregroundColor(Color("BackAccent"))
             }.navigationBarTitle("Active Alarms")
             
