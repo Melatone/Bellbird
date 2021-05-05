@@ -18,9 +18,11 @@ struct PassiveView: View {
                 
                 Color.init("Backdrop")
                     .edgesIgnoringSafeArea(.all)
-                ForEach(0..<self.alarms.count, id: \.self){ buzz in
+                VStack{
+                
+                    ForEach(0..<self.alarms.count, id: \.self){ buzz in
                     Group{
-                        
+                        Spacer()
                         if self.alarms[buzz].active == false{
                             
                             if type(of:self.alarms[buzz]) == Repeater.self{
@@ -39,9 +41,11 @@ struct PassiveView: View {
                             }
                             
                         }
+                        Spacer()
                     }
                     
                 }
+                
                     
                     
                     
@@ -49,9 +53,10 @@ struct PassiveView: View {
                     
                     
                     
-                .foregroundColor(Color("BackAccent"))
+                }   
             }.navigationBarTitle("Passive Alarms")
             
+        
         }
         
     }

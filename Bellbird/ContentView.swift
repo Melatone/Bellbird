@@ -8,9 +8,6 @@
 
 import SwiftUI
 
-
-
-
 struct ContentView: View {
  
     init() {
@@ -19,7 +16,7 @@ struct ContentView: View {
 
  }
     
-    @State var alarms : [Alarm] = [Repeater(name: "name", time: DateComponents(hour: 7, minute: 30), interval: 5, color: UIColor(named: "BBRed")!, meridian: "AM", active: false)]
+    @State var alarms : [Alarm] = [Repeater(name: "name", date: DateComponents(hour: 7, minute: 30), interval: 5, hue: Color( "BBYellow"), meridian: "AM", active: false)]
     
   
     var body: some View {
@@ -31,11 +28,8 @@ struct ContentView: View {
                     Image(systemName: "speaker.fill")
                     
                         
-                    
                     Text("Active")
                     
-                    
-                        
             }
             
             

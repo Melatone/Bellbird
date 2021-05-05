@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
-
+import SwiftUI
 class Timebomb: Alarm{
-  
-  
-    init(name:String = "name",time : DateComponents = DateComponents(),active: Bool = false,meridian :String = "AM", color: UIColor = UIColor()){
-  
+    var hue : Color
+    var date : DateComponents
+    init(name:String = "name",date : DateComponents = DateComponents(),active: Bool = false,meridian :String = "AM", hue: Color = Color("BBTimeBomb"),time : DateComponents = DateComponents(),color : Color = Color("BBViolet")){
+        self.hue = hue
+        self.date = date
        
     }
  

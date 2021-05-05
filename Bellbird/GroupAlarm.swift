@@ -8,14 +8,16 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 class GroupAlarm : Alarm{
 
     var times:[ComplexDate]
-
+    var hue: Color
    
-    init(name:String = "name", times : [ComplexDate] = [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], color:UIColor = UIColor(named:"BBMint")! ){
+    init(name:String = "name", times : [ComplexDate] = [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], hue: Color = Color("BBMint") ){
         
         self.times = times
+        self.hue = hue
         
     }
  

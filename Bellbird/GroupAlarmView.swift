@@ -93,7 +93,7 @@ struct GroupAlarmView: View {
             
             
         }.frame(width: 320, height: expand ? 420: 120, alignment: .top)
-            .background(Color(self.groupAlarm.color))
+            .background(self.groupAlarm.hue)
             .cornerRadius(20)
             .animation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 10))
         
@@ -121,6 +121,6 @@ struct NewToggleStyle:ToggleStyle{
 
 struct GroupAlarmView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupAlarmView(groupAlarm: Binding.constant(GroupAlarm(name: "name", times: [ComplexDate(date: DateComponents(hour:7,minute:30), active: false, meridian: "AM")], color :  UIColor(named:"BBGreen")!)))
+        GroupAlarmView(groupAlarm: Binding.constant(GroupAlarm(name: "name", times: [ComplexDate(date: DateComponents(hour:7,minute:30), active: false, meridian: "AM")], hue : Color("BBGreen"))))
     }
 }

@@ -8,15 +8,16 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 class Alarm:ObservableObject{
     var name:String
     var time:DateComponents
  
-    var color:UIColor
+    var color: Color
     var active:Bool
     var meridian:String
     
-    init(name:String = "name",time : DateComponents = DateComponents() ,color: UIColor = UIColor() ,active: Bool = false, meridian : String = "AM"){
+    init(name:String = "",time : DateComponents = DateComponents(), color: Color = Color("BBYellow") ,active: Bool = true, meridian : String = "AM"){
         self.name = name
         self.time = time
         self.meridian = meridian

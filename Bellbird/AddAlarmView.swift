@@ -22,8 +22,6 @@ struct AddAlarmView: View {
             ScrollView{
                 VStack{
                     
-         
-                    
                     
                     
                     
@@ -35,12 +33,12 @@ struct AddAlarmView: View {
                             
                         }
                         
-                        }.pickerStyle(SegmentedPickerStyle())
-                    .navigationBarTitle("Add Alarm")
+                    }.pickerStyle(SegmentedPickerStyle())
+                        .navigationBarTitle("Add Alarm")
                 }
                 ShowView(selected:picker, alarms: $alarms)
-
-                   
+                
+                
             }
             
         }
@@ -48,7 +46,8 @@ struct AddAlarmView: View {
     
     struct ShowView: View{
         var selected:PickView
- @Binding var alarms : [Alarm]
+        @Binding var alarms : [Alarm]
+        
         var body: some View{
             switch selected{
             case .group:
@@ -59,13 +58,13 @@ struct AddAlarmView: View {
             case .timebomb:
                 return  AnyView(AddTimebombView(bombs: $alarms))
                     .frame(width:370,height:700, alignment: .center)
-           
+                
             }
         }
     }
     struct AddAlarmView_Previews: PreviewProvider {
         static var previews: some View {
-            AddAlarmView(alarms: Binding.constant([Repeater(name: "name", time: DateComponents(hour:7,minute:30), interval: 5, color: UIColor(named:"BBPink")!, meridian: "AM")]))
+            AddAlarmView(alarms: Binding.constant([Repeater(name: "name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBPink"), meridian: "AM")]))
         }
     }
 }

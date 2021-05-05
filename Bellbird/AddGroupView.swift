@@ -19,13 +19,13 @@ struct AddGroupView: View {
     @Binding var groupAlarms : [Alarm]
     
     var body: some View{
-        
+        VStack{
         Form{
             
             TextField("Enter Name", text: self.$groupAlarm.name)
             
             
-            Picker(selection: self.$groupAlarm.color, label:  Text("Color")){
+            Picker(selection: self.$groupAlarm.hue, label:  Text("Color")){
                 
                 ForEach(colors, id: \.self){ color in
                     
@@ -39,11 +39,7 @@ struct AddGroupView: View {
                     
                 }
             }
-            Button(action:{
-                self.groupAlarm.times.append(ComplexDate(date:DateComponents(),active: false, meridian: "AM")) },
-                   label:  {
-                    Image(systemName: "plus")
-            })
+         
             
             ForEach(0..<self.groupAlarm.times.count-1, id: \.self) { buzzer in
                 Group{
@@ -102,9 +98,15 @@ struct AddGroupView: View {
                 Text("Confirm")
                     .foregroundColor(.black)
             })
-            
+          
             
         }
+        Button(action:{
+            self.groupAlarm.times.append(ComplexDate(date:DateComponents(),active: false, meridian: "AM")) },
+               label:  {
+                Image(systemName: "plus")
+        })
+    }
     }
     
     
@@ -114,7 +116,7 @@ struct AddGroupView: View {
     
     struct AddGroupView_Previews: PreviewProvider {
         static var previews: some View {
-            AddGroupView(groupAlarms: Binding.constant([GroupAlarm(name: "name", times: [ComplexDate(date: DateComponents(), active: false, meridian: "AM")],  color: UIColor(named: "BBCyan")!)]))
+            AddGroupView(groupAlarms: Binding.constant([GroupAlarm(name: String() , times: [ComplexDate(date: DateComponents(), active: false, meridian: "AM")],  hue: Color("BBCyan"))]))
         }
     }
 }

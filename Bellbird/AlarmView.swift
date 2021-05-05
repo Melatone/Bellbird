@@ -17,7 +17,7 @@ struct AlarmView: View {
         
         ZStack{
        RoundedRectangle(cornerRadius: 30)
-           .foregroundColor(Color(self.alarm.color))
+        .foregroundColor(self.alarm.color)
        .frame(width: 350, height: 120, alignment: .center)
           
             
@@ -53,6 +53,6 @@ struct AlarmView: View {
 
 struct AlarmView_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmView(alarm: Binding.constant(Alarm(name: "name",time :  DateComponents(hour:7,minute:30),color: UIColor.black, active: false)))
+        AlarmView(alarm: Binding.constant(Alarm(name: "name",time :  DateComponents(hour:7,minute:30),color: Color("BBLime"), active: false)))
     }
 }

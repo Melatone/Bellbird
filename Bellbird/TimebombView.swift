@@ -15,7 +15,7 @@ struct TimebombView: View {
             
             ZStack{
            RoundedRectangle(cornerRadius: 30)
-               .foregroundColor(Color(self.bomb.color))
+            .foregroundColor(self.bomb.hue)
            .frame(width: 350, height: 120, alignment: .center)
               
                 
@@ -28,7 +28,7 @@ struct TimebombView: View {
                     
                 
             
-                Text("\(self.bomb.time.value(for:.hour)!):\(self.bomb.time.value(for: .minute)!)")
+                Text("\(self.bomb.date.value(for:.hour)!):\(self.bomb.date.value(for: .minute)!)")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                 .bold()
@@ -49,6 +49,6 @@ struct TimebombView: View {
 
 struct TimebombView_Previews: PreviewProvider {
     static var previews: some View {
-        TimebombView(bomb: Binding.constant(Timebomb(name: "name", time: DateComponents(hour:7,minute:30),active: false)))
+        TimebombView(bomb: Binding.constant(Timebomb(name: "name",date: DateComponents(hour:7,minute:30),active: false, hue: Color("BBTimeBomb"))))
     }
 }

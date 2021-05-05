@@ -8,13 +8,16 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 class Repeater: Alarm{
   
     var interval:Int
-  
-    init(name:String = "name", time : DateComponents = DateComponents(), interval : Int = 5 , color:UIColor = UIColor(), meridian :String = "AM", active: Bool = false){
-     
+    var hue:Color
+    var date: DateComponents
+    init(name:String = "name", date : DateComponents = DateComponents(), time : DateComponents = DateComponents(), interval : Int = 5 , hue:Color = Color("BBViolet"),color : Color = Color("BBViolet"), meridian :String = "AM", active: Bool = false){
         self.interval = interval
+        self.date = date
+        self.hue = hue
        
     }
    

@@ -22,7 +22,7 @@ struct AddRepeaterView: View {
             
             Form{
                 TextField("Enter Name", text: self.$repeater.name)
-                Picker(selection: self.$repeater.color, label:  Text("Color")){
+                Picker(selection: self.$repeater.hue, label:  Text("Color")){
                 
                 ForEach(colors, id: \.self){ color in
                     
@@ -46,7 +46,7 @@ struct AddRepeaterView: View {
                                        .labelsHidden()
                                    HStack{
                                         
-                                   Picker(selection: self.$repeater.time.hour, label:  Text("Time")){
+                                   Picker(selection: self.$repeater.date.hour, label:  Text("Time")){
                                        
                                        ForEach(1...12, id: \.self) { int in
                                          Text("\(int)")
@@ -60,7 +60,7 @@ struct AddRepeaterView: View {
                                        
                                        
                                        
-                                   Picker(selection: self.$repeater.time.minute, label:  Text("Time")){
+                                   Picker(selection: self.$repeater.date.minute, label:  Text("Time")){
                                        
                                        ForEach(00..<60, id: \.self) { int in
                                          Text("\(int)")
@@ -98,6 +98,6 @@ struct AddRepeaterView: View {
 
 struct AddRepeaterView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRepeaterView(repeats: Binding.constant([Repeater(name: "name", time: DateComponents(hour:7,minute:30), interval: 5, color: UIColor(named:"BBPink")!, meridian: "AM")]))
+        AddRepeaterView(repeats: Binding.constant([Repeater(name: "Name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBRed"), meridian: "AM", active: true)]))
     }
 }
