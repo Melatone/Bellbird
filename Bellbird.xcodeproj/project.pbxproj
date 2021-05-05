@@ -488,7 +488,7 @@
 				DEVELOPMENT_TEAM = 32Q62P2C23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bellbird/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +509,7 @@
 				DEVELOPMENT_TEAM = 32Q62P2C23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bellbird/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
