@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F01936D263C350400EEF0E2 /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01936C263C350400EEF0E2 /* ActiveView.swift */; };
+		5F01936F263C410900EEF0E2 /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01936E263C410900EEF0E2 /* Repeater.swift */; };
+		5F019371263C485D00EEF0E2 /* TimebombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F019370263C485D00EEF0E2 /* TimebombView.swift */; };
+		5F22DA9E26375D9F00F1CE70 /* AddAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */; };
+		5F22DAA02637707A00F1CE70 /* AddGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22DA9F2637707A00F1CE70 /* AddGroupView.swift */; };
+		5F22DAA22637708500F1CE70 /* AddTimebombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22DAA12637708500F1CE70 /* AddTimebombView.swift */; };
+		5F22DAA42637708E00F1CE70 /* AddRepeaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22DAA32637708E00F1CE70 /* AddRepeaterView.swift */; };
+		5F22DAA6263869AC00F1CE70 /* Timebomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22DAA5263869AC00F1CE70 /* Timebomb.swift */; };
+		5F5B8F4A261CB31600A1E4E9 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B8F49261CB31600A1E4E9 /* AlarmView.swift */; };
 		5F5B92DE25FA75BE00AE8F0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */; };
 		5F5B92E025FA75BE00AE8F0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */; };
 		5F5B92E225FA75BE00AE8F0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92E125FA75BE00AE8F0A /* ContentView.swift */; };
 		5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B92E325FA75C000AE8F0A /* Assets.xcassets */; };
 		5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B92E625FA75C000AE8F0A /* Preview Assets.xcassets */; };
-		5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */; };
 		5F5B92F525FA75C000AE8F0A /* BellbirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92F425FA75C000AE8F0A /* BellbirdTests.swift */; };
 		5F5B930025FA75C000AE8F0A /* BellbirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */; };
+		5F73C423260BA67600D64D1B /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73C422260BA67600D64D1B /* Alarm.swift */; };
+		5F73C427260BAC9600D64D1B /* PassiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73C426260BAC9600D64D1B /* PassiveView.swift */; };
+		5F73C429260BACBA00D64D1B /* GroupAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73C428260BACBA00D64D1B /* GroupAlarmView.swift */; };
+		5F73C42D260BACD500D64D1B /* RepeaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73C42C260BACD500D64D1B /* RepeaterView.swift */; };
+		5FA4EF38262E362D005FC93C /* GroupAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4EF37262E362D005FC93C /* GroupAlarm.swift */; };
+		5FAB0321262F27B800477E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAB0320262F27B800477E12 /* LaunchScreen.storyboard */; };
+		5FC39A7B26275A8500447F82 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F01936C263C350400EEF0E2 /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
+		5F01936E263C410900EEF0E2 /* Repeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
+		5F019370263C485D00EEF0E2 /* TimebombView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimebombView.swift; sourceTree = "<group>"; };
+		5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmView.swift; sourceTree = "<group>"; };
+		5F22DA9F2637707A00F1CE70 /* AddGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupView.swift; sourceTree = "<group>"; };
+		5F22DAA12637708500F1CE70 /* AddTimebombView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimebombView.swift; sourceTree = "<group>"; };
+		5F22DAA32637708E00F1CE70 /* AddRepeaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRepeaterView.swift; sourceTree = "<group>"; };
+		5F22DAA5263869AC00F1CE70 /* Timebomb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timebomb.swift; sourceTree = "<group>"; };
+		5F5B8F49261CB31600A1E4E9 /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		5F5B92DA25FA75BE00AE8F0A /* Bellbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bellbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F5B92E125FA75BE00AE8F0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F5B92E325FA75C000AE8F0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F5B92E625FA75C000AE8F0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5F5B92E925FA75C000AE8F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F5B92EB25FA75C000AE8F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5B92F025FA75C000AE8F0A /* BellbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BellbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5B92F425FA75C000AE8F0A /* BellbirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellbirdTests.swift; sourceTree = "<group>"; };
@@ -49,6 +72,13 @@
 		5F5B92FB25FA75C000AE8F0A /* BellbirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BellbirdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5B92FF25FA75C000AE8F0A /* BellbirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellbirdUITests.swift; sourceTree = "<group>"; };
 		5F5B930125FA75C000AE8F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F73C422260BA67600D64D1B /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		5F73C426260BAC9600D64D1B /* PassiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveView.swift; sourceTree = "<group>"; };
+		5F73C428260BACBA00D64D1B /* GroupAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAlarmView.swift; sourceTree = "<group>"; };
+		5F73C42C260BACD500D64D1B /* RepeaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeaterView.swift; sourceTree = "<group>"; };
+		5FA4EF37262E362D005FC93C /* GroupAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAlarm.swift; sourceTree = "<group>"; };
+		5FAB0320262F27B800477E12 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +132,24 @@
 				5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */,
 				5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */,
 				5F5B92E125FA75BE00AE8F0A /* ContentView.swift */,
+				5F73C42C260BACD500D64D1B /* RepeaterView.swift */,
+				5FA4EF37262E362D005FC93C /* GroupAlarm.swift */,
+				5F22DA9F2637707A00F1CE70 /* AddGroupView.swift */,
+				5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */,
+				5F73C422260BA67600D64D1B /* Alarm.swift */,
+				5F019370263C485D00EEF0E2 /* TimebombView.swift */,
+				5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */,
+				5F5B8F49261CB31600A1E4E9 /* AlarmView.swift */,
+				5F73C428260BACBA00D64D1B /* GroupAlarmView.swift */,
+				5F22DAA32637708E00F1CE70 /* AddRepeaterView.swift */,
+				5F01936E263C410900EEF0E2 /* Repeater.swift */,
+				5F22DAA12637708500F1CE70 /* AddTimebombView.swift */,
+				5F22DAA5263869AC00F1CE70 /* Timebomb.swift */,
+				5F01936C263C350400EEF0E2 /* ActiveView.swift */,
+				5F73C426260BAC9600D64D1B /* PassiveView.swift */,
 				5F5B92E325FA75C000AE8F0A /* Assets.xcassets */,
-				5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */,
 				5F5B92EB25FA75C000AE8F0A /* Info.plist */,
+				5FAB0320262F27B800477E12 /* LaunchScreen.storyboard */,
 				5F5B92E525FA75C000AE8F0A /* Preview Content */,
 			);
 			path = Bellbird;
@@ -240,7 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F5B92EA25FA75C000AE8F0A /* LaunchScreen.storyboard in Resources */,
+				5FAB0321262F27B800477E12 /* LaunchScreen.storyboard in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
 			);
@@ -268,8 +313,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5B92DE25FA75BE00AE8F0A /* AppDelegate.swift in Sources */,
+				5F73C429260BACBA00D64D1B /* GroupAlarmView.swift in Sources */,
+				5F01936D263C350400EEF0E2 /* ActiveView.swift in Sources */,
+				5F019371263C485D00EEF0E2 /* TimebombView.swift in Sources */,
+				5F22DA9E26375D9F00F1CE70 /* AddAlarmView.swift in Sources */,
+				5F5B8F4A261CB31600A1E4E9 /* AlarmView.swift in Sources */,
 				5F5B92E025FA75BE00AE8F0A /* SceneDelegate.swift in Sources */,
+				5F73C427260BAC9600D64D1B /* PassiveView.swift in Sources */,
+				5F73C42D260BACD500D64D1B /* RepeaterView.swift in Sources */,
+				5F22DAA6263869AC00F1CE70 /* Timebomb.swift in Sources */,
+				5F01936F263C410900EEF0E2 /* Repeater.swift in Sources */,
 				5F5B92E225FA75BE00AE8F0A /* ContentView.swift in Sources */,
+				5F22DAA02637707A00F1CE70 /* AddGroupView.swift in Sources */,
+				5FA4EF38262E362D005FC93C /* GroupAlarm.swift in Sources */,
+				5F22DAA22637708500F1CE70 /* AddTimebombView.swift in Sources */,
+				5F73C423260BA67600D64D1B /* Alarm.swift in Sources */,
+				5FC39A7B26275A8500447F82 /* DeleteButtonView.swift in Sources */,
+				5F22DAA42637708E00F1CE70 /* AddRepeaterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,17 +363,6 @@
 			targetProxy = 5F5B92FC25FA75C000AE8F0A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5F5B92E825FA75C000AE8F0A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F5B92E925FA75C000AE8F0A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5F5B930225FA75C000AE8F0A /* Debug */ = {
@@ -436,8 +485,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bellbird/Preview Content\"";
+				DEVELOPMENT_TEAM = 32Q62P2C23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bellbird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,8 +506,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bellbird/Preview Content\"";
+				DEVELOPMENT_TEAM = 32Q62P2C23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bellbird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

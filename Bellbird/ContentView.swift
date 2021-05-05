@@ -8,18 +8,52 @@
 
 import SwiftUI
 
+
+
+
 struct ContentView: View {
+ 
+    init() {
+    UITabBar.appearance().barTintColor = UIColor(named: "BackAccent")!
+ UITabBar.appearance().unselectedItemTintColor = UIColor.white
+
+ }
+    
+    @State var alarms : [Alarm] = [Alarm]()
+    
+  
     var body: some View {
-        VStack{
-            Text("Goodbye, World!")
-            Text("commit test")
-        }
-        
+        TabView{
+            ActiveView(alarms: $alarms)
+                
+                .tabItem{
+                    
+                    Image(systemName: "speaker.fill")
+                    
+                        
+                    
+                    Text("Active")
+                    
+                    
+                        
+            }
+            
+            
+            PassiveView(alarms: $alarms)
+                .tabItem{
+                    Image(systemName: "speaker.zzz.fill")
+                    Text("Passive")
+                       
+            }
+        }.accentColor(Color("BBOrange"))
+           
+            
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
