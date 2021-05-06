@@ -22,7 +22,7 @@ struct PassiveView: View {
                 
                     ForEach(0..<self.alarms.count, id: \.self){ buzz in
                     Group{
-                        Spacer()
+                 
                         if self.alarms[buzz].active == false{
                             
                             if type(of:self.alarms[buzz]) == Repeater.self{
@@ -41,7 +41,7 @@ struct PassiveView: View {
                             }
                             
                         }
-                        Spacer()
+                       Spacer()
                     }
                     
                 }

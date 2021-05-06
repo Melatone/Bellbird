@@ -30,6 +30,8 @@
 		5FA4EF38262E362D005FC93C /* GroupAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4EF37262E362D005FC93C /* GroupAlarm.swift */; };
 		5FAB0321262F27B800477E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAB0320262F27B800477E12 /* LaunchScreen.storyboard */; };
 		5FC39A7B26275A8500447F82 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */; };
+		EF2653C026440E6E0074D968 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2653BF26440E6E0074D968 /* LocalNotificationManager.swift */; };
+		EF2653C226441FD70074D968 /* blackbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF2653C126441FD70074D968 /* blackbird.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		5FA4EF37262E362D005FC93C /* GroupAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAlarm.swift; sourceTree = "<group>"; };
 		5FAB0320262F27B800477E12 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FC39A7A26275A8500447F82 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
+		EF2653BF26440E6E0074D968 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		EF2653C126441FD70074D968 /* blackbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blackbird.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		5F5B92D125FA75BE00AE8F0A = {
 			isa = PBXGroup;
 			children = (
+				EF2653BF26440E6E0074D968 /* LocalNotificationManager.swift */,
 				5F5B92DC25FA75BE00AE8F0A /* Bellbird */,
 				5F5B92F325FA75C000AE8F0A /* BellbirdTests */,
 				5F5B92FE25FA75C000AE8F0A /* BellbirdUITests */,
@@ -129,6 +134,7 @@
 		5F5B92DC25FA75BE00AE8F0A /* Bellbird */ = {
 			isa = PBXGroup;
 			children = (
+				EF2653C126441FD70074D968 /* blackbird.mp3 */,
 				5F5B92DD25FA75BE00AE8F0A /* AppDelegate.swift */,
 				5F5B92DF25FA75BE00AE8F0A /* SceneDelegate.swift */,
 				5F22DA9D26375D9F00F1CE70 /* AddAlarmView.swift */,
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FAB0321262F27B800477E12 /* LaunchScreen.storyboard in Resources */,
+				EF2653C226441FD70074D968 /* blackbird.mp3 in Resources */,
 				5F5B92E725FA75C000AE8F0A /* Preview Assets.xcassets in Resources */,
 				5F5B92E425FA75C000AE8F0A /* Assets.xcassets in Resources */,
 			);
@@ -327,6 +334,7 @@
 				5F22DAA02637707A00F1CE70 /* AddGroupView.swift in Sources */,
 				5FA4EF38262E362D005FC93C /* GroupAlarm.swift in Sources */,
 				5F22DAA22637708500F1CE70 /* AddTimebombView.swift in Sources */,
+				EF2653C026440E6E0074D968 /* LocalNotificationManager.swift in Sources */,
 				5F73C423260BA67600D64D1B /* Alarm.swift in Sources */,
 				5FC39A7B26275A8500447F82 /* DeleteButtonView.swift in Sources */,
 				5F22DAA42637708E00F1CE70 /* AddRepeaterView.swift in Sources */,

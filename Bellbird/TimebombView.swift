@@ -34,7 +34,7 @@ struct TimebombView: View {
                 .bold()
                 .padding(.trailing, 50.0)
                 
-                Text("\(self.bomb.meridian)")
+                Text("\(self.bomb.merid)")
                 .foregroundColor(.white)
                     .font(.title)
                     .padding(.leading, 70.0)

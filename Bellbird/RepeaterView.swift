@@ -36,7 +36,7 @@ struct RepeaterView: View {
                 .bold()
                 .padding(.trailing, 50.0)
             
-            Text("\(self.alarm.meridian)")
+            Text("\(self.alarm.merid)")
                 .foregroundColor(.white)
                 .font(.title)
                 .padding(.leading, 70.0)

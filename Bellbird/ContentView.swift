@@ -16,7 +16,11 @@ struct ContentView: View {
 
  }
     
-    @State var alarms : [Alarm] = [Repeater(name: "name", date: DateComponents(hour: 7, minute: 30), interval: 5, hue: Color( "BBYellow"), merid: "AM", active: false)]
+  //  @State var alarms : [Alarm] = [Repeater(name: "name", date: DateComponents(hour: 7, minute: 30), interval: 5, hue: Color( "BBYellow"), merid: "AM", active: false)]
+    
+    //init(name:String = "name", times : [ComplexDate] = [ComplexDate(date: DateComponents(), active: false, meridian: "AM")], hue: Color = Color("BBMint") ){
+    
+    @State var alarms: [Alarm] = [GroupAlarm(name:"Group!!", times : [ComplexDate(date: DateComponents(hour : 11, minute : 14),active: true, meridian: "AM"),ComplexDate(date: DateComponents(hour : 11, minute : 18),active: true, meridian: "AM"),ComplexDate(date: DateComponents(hour : 11, minute : 26),active: false, meridian: "AM"),ComplexDate(date: DateComponents(hour : 12, minute : 12),active: false, meridian: "AM"),ComplexDate(date: DateComponents(hour : 2, minute : 45),active: true, meridian: "AM")], hue: Color("BBMint"))]
     
   
     var body: some View {
