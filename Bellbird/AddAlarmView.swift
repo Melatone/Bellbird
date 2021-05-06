@@ -64,7 +64,7 @@ struct AddAlarmView: View {
     }
     struct AddAlarmView_Previews: PreviewProvider {
         static var previews: some View {
-            AddAlarmView(alarms: Binding.constant([Repeater(name: "name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBPink"), meridian: "AM")]))
+            AddAlarmView(alarms: Binding.constant([Repeater(name: "name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBPink"), merid: "AM")]))
         }
     }
 }

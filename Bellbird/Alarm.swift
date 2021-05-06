@@ -17,7 +17,7 @@ class Alarm:ObservableObject{
     var active:Bool
     var meridian:String
     
-    init(name:String = "",time : DateComponents = DateComponents(), color: Color = Color("BBYellow") ,active: Bool = true, meridian : String = "AM"){
+    init(name:String = "",time : DateComponents = DateComponents(), color: Color = Color("BBYellow") ,active: Bool = true, meridian : String = ""){
         self.name = name
         self.time = time
         self.meridian = meridian

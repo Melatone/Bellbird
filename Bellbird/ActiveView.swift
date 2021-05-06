@@ -67,7 +67,7 @@ struct ActiveView: View {
 
 struct ActiveView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveView(alarms: Binding.constant([Repeater(name: "Name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBLime"), meridian: "AM", active: true)]))
+        ActiveView(alarms: Binding.constant([Repeater(name: "Name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBLime"), merid: "AM", active: true)]))
     }
 }
 

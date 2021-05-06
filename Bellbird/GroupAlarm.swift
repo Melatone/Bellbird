@@ -24,6 +24,7 @@ class GroupAlarm : Alarm{
    
 }
 
+
 struct ComplexDate: Hashable{
     var date : DateComponents
     var active : Bool

@@ -16,7 +16,9 @@ struct AddTimebombView: View {
     var amORpm = ["AM","PM"]
     @State var bomb = Timebomb()
     @Binding var bombs : [Alarm]
-    
+    @State var hour = 1
+    @State var minute = 0
+    @State var picked = "AM"
     var body: some View{
         
         VStack{
@@ -37,7 +39,7 @@ struct AddTimebombView: View {
                 }
                 
             }
-            Picker(selection:self.$bomb.meridian , label:  Text("Time")){
+            Picker(selection:self.$picked , label:  Text("Time")){
                 
                 ForEach(amORpm, id: \.self) { time in
                     Text("\(time)")
@@ -46,7 +48,7 @@ struct AddTimebombView: View {
                 .labelsHidden()
             HStack{
                 
-                Picker(selection: self.$bomb.date.hour, label:  Text("Time")){
+                Picker(selection: self.$hour, label:  Text("Time")){
                     
                     ForEach(1...12, id: \.self) { int in
                         Text("\(int)")
@@ -60,7 +62,7 @@ struct AddTimebombView: View {
                 
                 
                 
-                Picker(selection: self.$bomb.date.minute, label:  Text("Time")){
+                Picker(selection: self.$minute, label:  Text("Time")){
                     
                     ForEach(00..<60, id: \.self) { int in
                         Text("\(int)")
@@ -70,20 +72,21 @@ struct AddTimebombView: View {
                 }.pickerStyle(WheelPickerStyle())
                     .labelsHidden()
                     .frame(width: 20, height: 100, alignment: .leading)
+               
                 
             }
-            
+            Button(action: {
+                let bomber = Timebomb(name: self.bomb.name,  active: self.bomb.active, merid: self.picked, date: DateComponents(hour: self.hour, minute: self.minute), hue: Color("BBTimeBomb"))
+                self.bombs.append(bomber)
+              
+            }, label: {
+                Text("Confirm")
+                    .foregroundColor(.black)
+            })
             
             
         }
-        Button(action: {
-            let bomber = Timebomb(name: self.bomb.name, date: DateComponents(hour: self.bomb.date.hour, minute: self.bomb.date.minute), active: self.bomb.active, meridian: self.bomb.meridian, hue: Color("BBBrown"))
-            self.bombs.append(bomber)
-          
-        }, label: {
-            Text("Confirm")
-                .foregroundColor(.black)
-        })
+        
     }
     
     }
@@ -93,7 +96,7 @@ struct AddTimebombView: View {
     
     struct AddTimebombView_Previews: PreviewProvider {
         static var previews: some View {
-            AddTimebombView(bombs: Binding.constant([Timebomb(name: "name", date: DateComponents(hour:7,minute:30),active: false, hue: Color("BBTimeBomb"))]))
+            AddTimebombView(bombs: Binding.constant([Timebomb(name: "name", active: false, date: DateComponents(hour:7,minute:30), hue: Color("BBTimeBomb"))]))
             
         }
     }

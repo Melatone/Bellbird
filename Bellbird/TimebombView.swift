@@ -49,6 +49,6 @@ struct TimebombView: View {
 
 struct TimebombView_Previews: PreviewProvider {
     static var previews: some View {
-        TimebombView(bomb: Binding.constant(Timebomb(name: "name",date: DateComponents(hour:7,minute:30),active: false, hue: Color("BBTimeBomb"))))
+        TimebombView(bomb: Binding.constant(Timebomb(name: "name",active: false, date: DateComponents(hour:7,minute:30), hue: Color("BBTimeBomb"))))
     }
 }

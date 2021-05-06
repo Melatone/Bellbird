@@ -15,14 +15,18 @@ struct AddRepeaterView: View {
     @State var repeater = Repeater()
     @Binding var repeats : [Alarm]
     @State var interval : Int = 5
-
+    @State var colorPicked = "BBLime"
+    @State var hour = 1
+    @State var minute = 0
+    @State var picked = "AM"
         var body: some View{
             
             
             
             Form{
                 TextField("Enter Name", text: self.$repeater.name)
-                Picker(selection: self.$repeater.hue, label:  Text("Color")){
+               
+                Picker(selection: self.$colorPicked, label:  Text("Color")){
                 
                 ForEach(colors, id: \.self){ color in
                     
@@ -34,10 +38,11 @@ struct AddRepeaterView: View {
                     
                     
                     
-                }
-            }
+                    }
+                    }.pickerStyle(WheelPickerStyle())
+                    .labelsHidden()
                 
-                     Picker(selection:self.$repeater.meridian , label:  Text("Time")){
+                Picker(selection:self.$picked , label:  Text("Time")){
                                        
                                        ForEach(amORpm, id: \.self) { time in
                                          Text("\(time)")
@@ -46,7 +51,7 @@ struct AddRepeaterView: View {
                                        .labelsHidden()
                                    HStack{
                                         
-                                   Picker(selection: self.$repeater.date.hour, label:  Text("Time")){
+                                   Picker(selection: self.$hour, label:  Text("Time")){
                                        
                                        ForEach(1...12, id: \.self) { int in
                                          Text("\(int)")
@@ -60,7 +65,7 @@ struct AddRepeaterView: View {
                                        
                                        
                                        
-                                   Picker(selection: self.$repeater.date.minute, label:  Text("Time")){
+                                   Picker(selection: self.$minute, label:  Text("Time")){
                                        
                                        ForEach(00..<60, id: \.self) { int in
                                          Text("\(int)")
@@ -84,7 +89,8 @@ struct AddRepeaterView: View {
                 
                 
                 Button(action: {
-                    self.repeats.append(self.repeater)
+                    let repeating = Repeater(name: self.repeater.name, date: DateComponents(hour:self.hour, minute:self.minute), interval: self.repeater.interval, hue: Color(self.colorPicked), merid: self.picked, active: self.repeater.active)
+                    self.repeats.append(repeating)
                 }, label: {
                  Text("Confirm")
                      .foregroundColor(.black)
@@ -98,6 +104,6 @@ struct AddRepeaterView: View {
 
 struct AddRepeaterView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRepeaterView(repeats: Binding.constant([Repeater(name: "Name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBRed"), meridian: "AM", active: true)]))
+        AddRepeaterView(repeats: Binding.constant([Repeater(name: "Name", date: DateComponents(hour:7,minute:30), interval: 5, hue: Color("BBRed"), merid: "AM", active: true)]))
     }
 }

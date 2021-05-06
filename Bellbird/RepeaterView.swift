@@ -64,6 +64,6 @@ struct RepeaterView: View {
 
 struct RepeaterView_Previews: PreviewProvider {
     static var previews: some View {
-        RepeaterView(alarm: Binding.constant(Repeater(name: "name", date: DateComponents(hour: 7, minute: 30), interval: 5, hue: Color("BBBlue"), meridian: "AM", active: false)))
+        RepeaterView(alarm: Binding.constant(Repeater(name: "name", date: DateComponents(hour: 7, minute: 30), interval: 5, hue: Color("BBBlue"), merid: "AM", active: false)))
     }
 }
